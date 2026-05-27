@@ -221,7 +221,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 49913307, guid: aca413ecfdf14e94c92c98951a49c692, type: 3}
+  m_Sprite: {fileID: -407040642, guid: 67355dabb3f418f45a99b08bc30ddb0d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 592657271, guid: aca413ecfdf14e94c92c98951a49c692, type: 3}
+  m_Sprite: {fileID: -1083385377, guid: 67355dabb3f418f45a99b08bc30ddb0d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 1286548159}
   - component: {fileID: 1286548158}
   m_Layer: 5
-  m_Name: MenuUIBigfoot
+  m_Name: Menu-ProjectBigfoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1522683640, guid: aca413ecfdf14e94c92c98951a49c692, type: 3}
+  m_Sprite: {fileID: -945653037, guid: 67355dabb3f418f45a99b08bc30ddb0d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -774,7 +774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1932447323, guid: aca413ecfdf14e94c92c98951a49c692, type: 3}
+  m_Sprite: {fileID: -1045429959, guid: 67355dabb3f418f45a99b08bc30ddb0d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1924753813, guid: aca413ecfdf14e94c92c98951a49c692, type: 3}
+  m_Sprite: {fileID: -1996400091, guid: 67355dabb3f418f45a99b08bc30ddb0d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
