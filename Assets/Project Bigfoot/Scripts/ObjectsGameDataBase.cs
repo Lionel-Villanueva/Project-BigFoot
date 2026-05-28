@@ -14,7 +14,7 @@ public class ObjectsGameDataBase : SerializedScriptableObject
             return obj;
         }
 
-        Debug.LogWarning($"No existe objeto con ID: {id}");
+        Debug.Log($"No existe objeto con ID: {id}");
         return null;
     }
 }
