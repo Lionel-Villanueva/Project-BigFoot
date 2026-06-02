@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpHeight = 2f;
     public float gravity = -9.81f;
+    public float rotationSpeed = 10f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -29,8 +30,14 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
+        Vector3 move = Vector3.right * moveInput.x + Vector3.forward * moveInput.y;
         controller.Move(move * moveSpeed * Time.deltaTime);
+
+        if (moveInput != Vector2.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(move);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
