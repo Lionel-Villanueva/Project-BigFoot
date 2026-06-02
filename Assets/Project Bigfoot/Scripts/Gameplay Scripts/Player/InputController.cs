@@ -7,7 +7,7 @@ public class InputController : MonoBehaviour
     public Vector2 MoveInput { get; private set; }
     public System.Action OnJumpStarted;
 
-    private void Awake()
+    private void OnEnable()
     {
         playerControls = new InputSystem_Actions();
 
