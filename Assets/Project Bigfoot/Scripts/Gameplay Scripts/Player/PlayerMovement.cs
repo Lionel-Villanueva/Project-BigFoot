@@ -20,6 +20,15 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
     }
+    private void OnEnable()
+    {
+        InputController.OnJumpStarted += ProcessJump;
+    }
+    private void Update()
+    {
+        ProcessMovement(InputController.MoveInput);
+
+    }
 
     public void ProcessMovement(Vector2 moveInput)
     {

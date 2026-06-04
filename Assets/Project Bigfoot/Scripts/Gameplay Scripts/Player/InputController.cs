@@ -1,11 +1,13 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static Readme;
 
 public class InputController : MonoBehaviour
 {
     private InputSystem_Actions playerControls;
-    public Vector2 MoveInput { get; private set; }
-    public System.Action OnJumpStarted;
+    public static Vector2 MoveInput { get; private set; }
+    public static event Action OnJumpStarted;
 
     private void OnEnable()
     {
