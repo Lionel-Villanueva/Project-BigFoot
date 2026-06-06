@@ -4,33 +4,26 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float jumpHeight = 2f;
+    public float jumpForce = 5f;
     public float gravity = -9.81f;
-    public float rotationSpeed = 10f;
-
+    public float mouseSensitivity = 50f;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundLayer;
+    public Transform playerCamera;
 
     private CharacterController controller;
     private Vector3 velocity;
     private bool isGrounded;
+    private float xRotation = 0f;
+    private float yRotation = 0f;
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
     }
-    private void OnEnable()
-    {
-        InputController.OnJumpStarted += ProcessJump;
-    }
+
     private void Update()
-    {
-        ProcessMovement(InputController.MoveInput);
-
-    }
-
-    public void ProcessMovement(Vector2 moveInput)
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer);
 
@@ -39,24 +32,36 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        Vector3 move = Vector3.right * moveInput.x + Vector3.forward * moveInput.y;
-        controller.Move(move * moveSpeed * Time.deltaTime);
-
-        if (moveInput != Vector2.zero)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(move);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-        }
-
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    public void ProcessMovement(Vector2 moveInput)
+    {
+        Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
+        controller.Move(move * moveSpeed * Time.deltaTime);
+    }
+
+    public void ProcessLook(Vector2 lookInput)
+    {
+        yRotation += lookInput.x * mouseSensitivity * Time.deltaTime;
+        xRotation -= lookInput.y * mouseSensitivity * Time.deltaTime;
+
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        transform.localRotation = Quaternion.Euler(0f, yRotation, 0f);
+
+        if (playerCamera != null)
+        {
+            playerCamera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        }
     }
 
     public void ProcessJump()
     {
         if (isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocity.y = jumpForce;
         }
     }
 }

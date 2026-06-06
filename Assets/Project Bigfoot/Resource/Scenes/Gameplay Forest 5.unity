@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ea7ba3d3fcedf4280786ec19888857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputController
+  playerMovement: {fileID: 69826793}
 --- !u!114 &69826793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,14 +320,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 5
-  jumpHeight: 2
+  jumpForce: 5
   gravity: -9.81
-  rotationSpeed: 10
+  mouseSensitivity: 50
   groundCheck: {fileID: 924037969}
   groundDistance: 0.4
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  playerCamera: {fileID: 635094869}
 --- !u!1 &405011657
 GameObject:
   m_ObjectHideFlags: 0
