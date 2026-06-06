@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Project Bigfoot/Resource/Scenes/ProjectBigfoot.unity
+    guid: 1046b2a1be968884a897f2922a2eb7e6
+  - enabled: 1
+    path: Assets/Project Bigfoot/Resource/Scenes/Gameplay.unity
+    guid: 601ee486bf3399a42901086a6dc6b58c
+  - enabled: 1
+    path: Assets/Project Bigfoot/Resource/Scenes/Credits.unity
+    guid: ceba792f98cf202478fd4a19cff66fed
+  - enabled: 1
+    path: Assets/Project Bigfoot/Resource/Scenes/Defeat.unity
+    guid: 35d940e7befe30945a9b021895575420
+  - enabled: 1
+    path: Assets/Project Bigfoot/Resource/Scenes/Victory.unity
+    guid: 63620ab9b5842194d9e0a06eee45df3a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
