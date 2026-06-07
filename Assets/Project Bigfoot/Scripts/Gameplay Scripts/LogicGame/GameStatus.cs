@@ -1,4 +1,4 @@
-public enum GameStatus
+public enum GameStatus2
 {
     MenuPrincipal,
     EnCaceria,

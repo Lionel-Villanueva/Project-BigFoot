@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager2 : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static GameManager2 Instance { get; private set; }
 
-    public GameStatus currentStatus;
+    public GameStatus2 currentStatus;
 
     private void Awake()
     {
@@ -22,26 +22,26 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        ChangeStatus(GameStatus.MenuPrincipal);
+        ChangeStatus(GameStatus2.MenuPrincipal);
     }
 
-    public void ChangeStatus(GameStatus newStatus)
+    public void ChangeStatus(GameStatus2 newStatus)
     {
         currentStatus = newStatus;
 
-        if (currentStatus == GameStatus.Pausa || currentStatus == GameStatus.MenuPrincipal)
+        if (currentStatus == GameStatus2.Pausa || currentStatus == GameStatus2.MenuPrincipal)
         {
             Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        else if (currentStatus == GameStatus.EnCaceria)
+        else if (currentStatus == GameStatus2.EnCaceria)
         {
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-        else if (currentStatus == GameStatus.Derrota || currentStatus == GameStatus.Victoria)
+        else if (currentStatus == GameStatus2.Derrota || currentStatus == GameStatus2.Victoria)
         {
             Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.None;
@@ -51,17 +51,17 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        ChangeStatus(GameStatus.EnCaceria);
+        ChangeStatus(GameStatus2.EnCaceria);
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        ChangeStatus(GameStatus.EnCaceria);
+        ChangeStatus(GameStatus2.EnCaceria);
     }
 
     public void FinishGame()
     {
-        ChangeStatus(GameStatus.Victoria);
+        ChangeStatus(GameStatus2.Victoria);
     }
 }
