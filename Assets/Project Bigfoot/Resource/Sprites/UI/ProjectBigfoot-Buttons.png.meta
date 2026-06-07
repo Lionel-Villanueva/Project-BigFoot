@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 67355dabb3f418f45a99b08bc30ddb0d
+guid: 649f9ff90bd034b4e8400d99310cb7c0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,7 +81,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -106,45 +106,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -152,20 +113,20 @@ TextureImporter:
       name: ProjectBigfoot
       rect:
         serializedVersion: 2
-        x: 162
-        y: 288
-        width: 335
-        height: 129
+        x: 182
+        y: 446
+        width: 329
+        height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5918fc57aef185b45a01d9a1d0b5bece
-      internalID: -1083385377
+      spriteID: 0687e9afdb7a79047a7557efdd8830a6
+      internalID: -491809317
       vertices: []
       indices: 
       edges: []
@@ -174,10 +135,10 @@ TextureImporter:
       name: Button-Start
       rect:
         serializedVersion: 2
-        x: 197
-        y: 210
-        width: 249
-        height: 53
+        x: 215
+        y: 369
+        width: 247
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,8 +147,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30a53f7f7d044d140b9e2b2593bffdc0
-      internalID: -1045429959
+      spriteID: 843f70f35629a494bae8465bdf802e95
+      internalID: 165683623
       vertices: []
       indices: 
       edges: []
@@ -196,10 +157,10 @@ TextureImporter:
       name: Button-Options
       rect:
         serializedVersion: 2
-        x: 197
-        y: 142
-        width: 250
-        height: 54
+        x: 216
+        y: 303
+        width: 246
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +169,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ce0642ae4888ee42a90153509d34bba
-      internalID: -407040642
+      spriteID: 54b5337cd862aa647bc3ac25dbcc0b2a
+      internalID: 816239250
       vertices: []
       indices: 
       edges: []
@@ -218,9 +179,31 @@ TextureImporter:
       name: Button-Credits
       rect:
         serializedVersion: 2
-        x: 196
-        y: 75
-        width: 252
+        x: 217
+        y: 236
+        width: 245
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9be44b1c05a8e74b8e543e8bc985a96
+      internalID: 128101950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button-Exit
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 168
+        width: 245
         height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -230,30 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64cb405a8fb1591488827a12d2db2c92
-      internalID: -945653037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Button-Exit
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 7
-        width: 249
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7bf6b9575c022bc4d8f6ca18a55e39d9
-      internalID: -1996400091
+      spriteID: 3ee95f9aa80ca5c40b28db5116af9d55
+      internalID: 293507748
       vertices: []
       indices: 
       edges: []
@@ -262,7 +223,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 05e8d3c5c20066b4f8434b40d468ad13
+    spriteID: a4de9b7f31b6e7645998a03aafe52f81
     internalID: 0
     vertices: []
     indices: 
@@ -272,11 +233,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Button-Credits: -945653037
-      Button-Exit: -1996400091
-      Button-Options: -407040642
-      Button-Start: -1045429959
-      ProjectBigfoot: -1083385377
+      Button-Credits: 128101950
+      Button-Exit: 293507748
+      Button-Options: 816239250
+      Button-Start: 165683623
+      ProjectBigfoot: -491809317
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
